@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RegisterBs = () => {
     const handleWithBs = (event) => {
@@ -25,7 +26,8 @@ const RegisterBs = () => {
                 <label className="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
-            </form>            
+            </form> 
+            
         </div>
     );
 };

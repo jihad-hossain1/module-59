@@ -30,6 +30,7 @@ const RegisterRbs = () => {
                     Submit
                 </Button>
             </Form>
+            
         </div>
     );
 };
