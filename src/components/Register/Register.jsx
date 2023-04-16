@@ -19,6 +19,7 @@ const Register = () => {
         setError('');
         const email = event.target.email.value;
         const password = event.target.password.value;
+        const name = event.target.name.value;
 
         console.log(email, password);
         // validate
@@ -84,7 +85,7 @@ const Register = () => {
         <div className='text-center'>
             <h2 className='font-semibold text-xl underline text-blue-600'>Please Register</h2>
             <form onSubmit={handleSubmit} className='my-5'>
-                <input on  className='my-1 rounded border p-1' type="text" name='name' placeholder='Your Name' required/>
+                <input   className='my-1 rounded border p-1' type="text" name='name' placeholder='Your Name' required/>
                 <br />
                 <input onChange={handleEmail} className='my-1 rounded border p-1' type="email" name='email' placeholder='Your email' required/>
                 <br />
