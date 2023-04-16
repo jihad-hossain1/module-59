@@ -10,6 +10,7 @@ const Loging = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('')
     const emailRef = useRef();
+    const [visibleBTN, setVisibleBTN] = useState(false);
 
     const handleForm = (event) => {
         event.preventDefault();
@@ -71,7 +72,12 @@ const Loging = () => {
                 <h2 className='my-5 text-xl font-semibold'>Please logIn</h2>
                 <input type="email" ref={emailRef} placeholder="Type Email" className="input input-bordered input-success w-full max-w-xs" name='email' required/>
                 <br />
-                <input type="password" placeholder="Type Password" className="input input-bordered input-success w-full max-w-xs" name="password" required/>
+                <input type={visibleBTN ? 'text' : "password"} placeholder="Type Password" className="input input-bordered input-success w-full max-w-xs" name="password" required />
+                <button onClick={() => setVisibleBTN(!visibleBTN)}>
+                    {
+                        visibleBTN ? <button className='bg-blue-300 rounded px-2'>Hide</button> : <button className='bg-blue-300 rounded px-2'>Visible</button>
+                    }
+                </button>
                 {/* <FormCheck></FormCheck> */}
                 <br />
                 <button className='rounded px-1 bg-purple-100 '>Submit</button>

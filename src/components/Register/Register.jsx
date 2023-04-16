@@ -11,7 +11,8 @@ const Register = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
 
-    
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
         // console.log(event.target.email.value);
